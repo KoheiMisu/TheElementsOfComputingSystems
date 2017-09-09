@@ -15,4 +15,7 @@ CHIP Bit {
 
     PARTS:
     // Put your code here:
+    Mux(a=feedback, b=in, sel=load, out=dffin);
+    // muxから受けてmuxに一部結果を返す
+    DFF(in=dffin, out=feedback, out=out);
 }
